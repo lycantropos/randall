@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  randall-cpython:
+    build:
+      context: .
+      args:
+        - IMAGE_NAME=${CPYTHON_IMAGE_NAME}
+        - IMAGE_VERSION=${CPYTHON_IMAGE_VERSION}
+    image: lycantropos/randall-cpython:0.0.0
+    volumes:
+      - ./Cargo.toml:/opt/randall/Cargo.toml
+      - ./pytest.ini:/opt/randall/pytest.ini
+      - ./randall:/opt/randall/randall
+      - ./README.md:/opt/randall/README.md
+      - ./requirements-setup.txt:/opt/randall/requirements-setup.txt
+      - ./requirements-tests.txt:/opt/randall/requirements-tests.txt
+      - ./rust-toolchain.toml:/opt/randall/rust-toolchain.toml
+      - ./setup.py:/opt/randall/setup.py
+      - ./src:/opt/randall/src
+      - ./tests:/opt/randall/tests
+    entrypoint: pytest

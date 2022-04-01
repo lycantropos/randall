@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  randall-pypy:
+    build:
+      context: .
+      args:
+        - IMAGE_NAME=${PYPY_IMAGE_NAME}
+        - IMAGE_VERSION=${PYPY_IMAGE_VERSION}
+    image: lycantropos/randall-pypy:0.0.0
+    volumes:
+      - ./pytest.ini:/opt/randall/pytest.ini
+      - ./randall:/opt/randall/randall
+      - ./README.md:/opt/randall/README.md
+      - ./requirements-tests.txt:/opt/randall/requirements-tests.txt
+      - ./setup.py:/opt/randall/setup.py
+      - ./tests:/opt/randall/tests
+    entrypoint: pytest
