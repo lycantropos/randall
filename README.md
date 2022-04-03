@@ -1,7 +1,7 @@
 randall
 =======
 
-[![](https://dev.azure.com//randall/_apis/build/status/lycantropos.randall?branchName=master)](https://dev.azure.com//randall/_build/latest?branchName=master "Azure Pipelines")
+[![](https://github.com/lycantropos/randall/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/lycantropos/randall/actions/workflows/ci.yml "Github Actions")
 [![](https://codecov.io/gh/lycantropos/randall/branch/master/graph/badge.svg)](https://codecov.io/gh/lycantropos/randall "Codecov")
 [![](https://img.shields.io/github/license/lycantropos/randall.svg)](https://github.com/lycantropos/randall/blob/master/LICENSE "License")
 [![](https://badge.fury.io/py/randall.svg)](https://badge.fury.io/py/randall "PyPI")
