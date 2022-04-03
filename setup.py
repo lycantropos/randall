@@ -44,10 +44,13 @@ if platform.python_implementation() == 'CPython':
         from setuptools_rust import RustExtension
 
 
-    class LazyRustExtensions:
+    class LazyRustExtensions(list):
         def __iter__(self) -> Iterator['RustExtension']:
             from setuptools_rust import RustExtension
-            yield RustExtension('._' + randall.__name__)
+            yield RustExtension(randall.__name__ + '._' + randall.__name__)
+
+        def __len__(self) -> int:
+            return 1
 
 
     parameters.update(rust_extensions=LazyRustExtensions(),
