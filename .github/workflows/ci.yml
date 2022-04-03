@@ -15,7 +15,7 @@ jobs:
     runs-on: ${{ matrix.platform.os }}
     strategy:
       matrix:
-        python_version: ['3.6', '3.7', '3.8', '3.9', '3.10']
+        python_version: ['3.7', '3.8', '3.9', '3.10']
         platform: [
           {
             os: 'macos-latest',
@@ -39,11 +39,11 @@ jobs:
           },
         ]
         include:
-          - python_version: 'pypy-3.6'
+          - python_version: 'pypy-3.7'
             platform: { os: 'macos-latest', python_architecture: 'x64' }
-          - python_version: 'pypy-3.6'
+          - python_version: 'pypy-3.7'
             platform: { os: 'ubuntu-latest', python_architecture: 'x64' }
-          - python_version: 'pypy-3.6'
+          - python_version: 'pypy-3.7'
             platform: { os: 'windows-latest', python_architecture: 'x64' }
     steps:
       - name: 'Checkout'
@@ -249,7 +249,7 @@ jobs:
     needs: ['build-sdist', 'build-wheels']
     strategy:
       matrix:
-        python_version: ['3.6', '3.7', '3.8', '3.9', '3.10']
+        python_version: ['3.7', '3.8', '3.9', '3.10']
         platform: [
           {
             os: 'macos-latest',
@@ -269,11 +269,11 @@ jobs:
           },
         ]
         include:
-          - python_version: 'pypy-3.6'
+          - python_version: 'pypy-3.7'
             platform: { os: 'macos-latest', python_architecture: 'x64' }
-          - python_version: 'pypy-3.6'
+          - python_version: 'pypy-3.7'
             platform: { os: 'ubuntu-latest', python_architecture: 'x64' }
-          - python_version: 'pypy-3.6'
+          - python_version: 'pypy-3.7'
             platform: { os: 'windows-latest', python_architecture: 'x64' }
     steps:
       - name: 'Setup Python'
