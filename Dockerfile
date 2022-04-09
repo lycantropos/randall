@@ -17,6 +17,7 @@ COPY rust-toolchain.toml .
 COPY requirements-setup.txt .
 COPY README.md .
 COPY pytest.ini .
+COPY build.rs .
 COPY Cargo.toml .
 COPY setup.py .
 COPY randall randall
