@@ -9,7 +9,6 @@ services:
         - IMAGE_VERSION=${CPYTHON_IMAGE_VERSION}
     image: lycantropos/randall-cpython:0.0.0
     volumes:
-      - ./build.rs:/opt/randall/build.rs
       - ./Cargo.toml:/opt/randall/Cargo.toml
       - ./pytest.ini:/opt/randall/pytest.ini
       - ./randall:/opt/randall/randall
